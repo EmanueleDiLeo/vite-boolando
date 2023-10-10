@@ -31,6 +31,7 @@ export default {
 @use '../scss/partials/variabiles' as *;
 @use '../scss/partials/utiles' as *;
 @use '../scss/partials/general' as *;
+@use '../scss/partials/typography' as *;
 
 header{
   padding-top: 20px;
@@ -49,9 +50,6 @@ header{
     }
     nav{
       width: 30%;
-      a{
-        margin-right: 10px;
-      }
     }
   }
 }

@@ -23,8 +23,16 @@
 </template>
 
 <script>
+import {products} from '../data/mainProducts';
+
+
 export default {
   name:'Main',
+  data(){
+    return{
+      products,
+    }
+  },
 }
 </script>
 
@@ -32,6 +40,7 @@ export default {
   @use '../scss/partials/variabiles' as *;
   @use '../scss/partials/utiles' as *;
   @use '../scss/partials/general' as *;
+  @use '../scss/partials/typography' as *;
 
   main{
     margin: 150px 0px 30px 0px;

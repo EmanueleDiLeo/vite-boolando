@@ -33,6 +33,7 @@ export default {
   @use '../scss/partials/variabiles' as *;
   @use '../scss/partials/utiles' as *;
   @use '../scss/partials/general' as *;
+  @use '../scss/partials/typography' as *;
 
   footer{
   padding:30px 0px 20px 0px;
@@ -50,9 +51,6 @@ export default {
   }
   ul{
     margin-top: 10px;
-    a{
-      margin-right: 10px;
-    }
   }
 }
 </style>
