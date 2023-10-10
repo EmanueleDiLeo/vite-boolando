@@ -1,10 +1,12 @@
 <template>
   <main>
     <div class="container flex">
-      <!-- <div class="card">
+
+
+     <div class="card">
         <div class="cont-img">
-          <img src="img/1.webp" alt="levi" title="levi">
-          <img class="switch" src="img/1b.webp" alt="levi" title="levi">
+          <img src="../assets/img/1.webp" alt="levi" title="levi">
+          <img class="switch" src="../assets/img/1b.webp" alt="levi" title="levi">
         </div>
 
         <span class="offer box-position">-50%</span>
@@ -16,15 +18,15 @@
         <h2>RELAXED FIT TEE UNISEX</h2>
         <span class="price">14,99 &euro; </span>
         <span class="old-price"> 29,99 &euro;</span>
-        
-      </div> -->
+      </div>
+
+
     </div>
   </main>
 </template>
 
 <script>
 import {products} from '../data/mainProducts';
-
 
 export default {
   name:'Main',
@@ -64,14 +66,64 @@ export default {
             max-width: 100%;
             max-height:auto;
           }
+          .switch{
+            position: absolute;
+            display: none;
+            z-index: 1;
+          }
+          &:hover .switch{
+            display: block;
+          }
+        }
+        .box-position{
+          padding: 3px 8px;
+          position: absolute;
+          z-index: 2;
+          color: white;
+        }
+
+        .offer{
+          background-color: #ff0000;
+          bottom: 110px;
+          left: 0px;
+        }
+
+        .green{
+          background-color: #008000;
+          bottom: 110px;
+          left: 60px;
+        }
+
+        .heart{
+          color: black;
+          position: absolute;
+          font-size: 2.5rem;
+          text-align: center;
+          padding: 6px 16px;
+          background-color: white;
+          right: 0;
+          top: 10px;
+          z-index: 2;
+          cursor: pointer;
+          &:hover{
+            color: red;
+          }
+        }
+
+        span{
+          color: #bbc0c5;
+        }
+
+        .price{
+          color: #ff0000;
+        }
+
+        .old-price{
+          text-decoration: line-through;
         }
       }
-
     }
   }
-
-
-
 
 
 </style>
