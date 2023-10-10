@@ -3,9 +3,10 @@
     <div class="container flex">
     <nav class="main-menu">
       <ul class="flex">
-        <li><a href="#"><strong>Donna</strong></a></li>
-        <li><a href="#"><strong>Uomo</strong></a></li>
-        <li><a href="#"><strong>Bambini</strong></a></li>
+        <li v-for="(filter, index) in filters"
+          :key="index">
+          <a href="#"><strong>{{ filter }}</strong></a>
+        </li>
       </ul>
     </nav>
     <img src="/public/boolean-logo.png" alt="logo" title="logo">
@@ -21,10 +22,18 @@
 </template>
 
 <script>
-export default {
-  name:'Header',
-}
-</script>
+  import {filters , profile} from '../data/headerMenu';
+
+  export default {
+    name:'Header',
+    data(){
+      return{
+        filters,
+        profile
+      }
+    }
+  }
+  </script>
 
 <style lang="scss" scoped>
 
