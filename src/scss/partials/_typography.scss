@@ -1,0 +1,14 @@
+@use './variabiles' as *;
+
+body{
+  font-family: $primary-font;
+}
+
+a{
+  text-decoration: none;
+  color: $link-color;
+}
+
+ul{
+  list-style: none;
+}
