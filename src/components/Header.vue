@@ -5,16 +5,18 @@
       <ul class="flex">
         <li v-for="(filter, index) in filters"
           :key="index">
-          <a href="#"><strong>{{ filter }}</strong></a>
+          <a :href="filter.href"><strong>{{ filter.text }}</strong></a>
         </li>
       </ul>
     </nav>
     <img src="/public/boolean-logo.png" alt="logo" title="logo">
     <nav class="shop-menu">
       <ul class="flex">
-        <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-        <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <li v-for="(element,index) in profile"
+          :key="index">
+        <a :href="element.href"><i :class="element.icon"></i></a>
+      </li>
+
       </ul>
     </nav>
   </div>

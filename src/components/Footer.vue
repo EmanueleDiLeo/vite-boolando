@@ -12,11 +12,12 @@
         <span>Trovaci anche su</span>
 
         <ul class="flex">
-          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li v-for="(social,index) in social"
+            :key="index">
+            <a :href="social.href"><i :class="social.icon"></i></a>
+          </li>
+  
+          
         </ul>
       </div>
     </div>
@@ -24,8 +25,15 @@
 </template>
 
 <script>
+import {social} from '../data/footerMenu';
+
 export default {
   name:'Footer',
+  data(){
+    return{
+      social,
+    }
+  }
 }
 </script>
 

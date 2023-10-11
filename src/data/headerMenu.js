@@ -1,5 +1,31 @@
-const filters = ['Donna','Uomo','Bambino'];
+const filters = [
+  {
+    href:'#',
+    text:'Donna',
+  },
+  {
+    href:'#',
+    text:'Uomo',
+  },
+  {
+    href:'#',
+    text:'Bambino',
+  },
+];
 
-const profile = ["fa-regular fa-user","fa-regular fa-heart","fa-solid fa-bag-shopping"];
+const profile = [
+  {
+    href:'#',
+    icon:'fa-regular fa-user',
+  },
+  {
+    href:'#',
+    icon:"fa-regular fa-heart",
+  },
+  {
+    href:'#',
+    icon:"fa-solid fa-bag-shopping",
+  },
+];
 
 export {filters , profile}
