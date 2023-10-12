@@ -6,8 +6,10 @@
       <img class="switch" :src="product.imgHover" :alt="product.brand" :title="product.brand">
     </div>
 
-    <span class="offer box-position" v-if="product.discount !== null">{{ product.discount }}</span>
-    <span class="green box-position" v-if="product.green !== null">{{ product.green }}</span>
+    <div class="box-position">
+      <span class="offer" v-if="product.discount !== null">{{ product.discount }}</span>
+      <span class="green" v-if="product.green !== null">{{ product.green }}</span>
+    </div>
 
     <span class="heart" 
       @click="product.favorite = !product.favorite"
@@ -61,22 +63,22 @@ export default {
       }
     }
     .box-position{
-      padding: 3px 8px;
       position: absolute;
       z-index: 2;
-      color: white;
-    }
-
-    .offer{
-      background-color: #ff0000;
       bottom: 110px;
-      left: 0px;
-    }
 
-    .green{
-      background-color: #008000;
-      bottom: 110px;
-      left: 60px;
+      span{
+        color: white;
+        padding: 3px 8px;
+
+          &.offer{
+          background-color: #ff0000;
+          margin-right: 10px;
+        }
+        &.green{
+          background-color: #008000;
+        }
+      }
     }
 
     .heart{
